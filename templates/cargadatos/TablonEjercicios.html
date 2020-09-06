@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+
+{% block footer%}
+
+
+<table class ="table table=bordered">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>UsuarioUnab</td>
+            <td>dia</td>
+            <td>mes</td>
+            <td>año</td>
+            <td>IdEjercicio</td>
+            <td>Puntaje</td>
+        </tr>
+    </thead>
+    <tbody>
+         {% if object_list %}
+         {% for tablon in object_list %}
+        <tr>
+            <td>{{ TablonEjercicios.id }}</td>
+            <td>{{ TablonEjercicios.UsuarioUnab }}</td>
+            <td>{{ TablonEjercicios.dia }}</td>
+            <td>{{ TablonEjercicios.mes }}</td>
+            <td>{{ TablonEjercicios.año }}</td>
+            <td>{{ TablonEjercicios.IdEjercicio }}</td>
+            <td>{{ TablonEjercicios.Puntaje }}</td>           
+        </tr>
+        {% endfor %}
+
+        {% else %}
+        <h1>No hay registros </h1>
+
+        {% endif %}
+        </tbody>
+        
+</table>
+{% endblock %}
