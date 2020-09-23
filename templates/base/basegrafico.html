@@ -87,7 +87,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 </head>
 <body>
-    <canvas id="myChart" width="200" height ="200"></canvas>
+    <canvas id="myChart" width="5" height ="5"></canvas>
 
 {% block scripts %}
 <script>
@@ -135,18 +135,33 @@ options: {
  
    {% block content %}
    <table class ="table table=bordered">
-    <thead>
-        <tr>
-            <td>NombreUsuario</td>
-        </tr>
-    </thead>
     <tbody>
+        <tr>
+            <td>Usuario plataforma = <td>{{user.username}}</td>
+        </tr>
+        <tr>
+            <td>Nombre = <td>{{user.first_name}}</td>
+        </tr>
+        <tr>
+            <td>Apellido = <td>{{user.last_name}}</td>
+        </tr>
+        <tr>
+            <td>Rut = <td>18.965.573-k</td>
+        </tr>
+        <tr>
+            <td>NRC = <td>2020</td>
+        </tr>
+        <tr>
+            <td>Sede = <td>Santiago</td>
+        </tr>
+        <tr>
+            <td>Carrera = <td>Ingenieria civil informatica</td>
+        </tr>
+        <tr>
+            <td>Jornada = <td>Diurno</td>
+        </tr>        
 
-       <tr>
-           <td>{{user.username}}</td>
-       </tr>
     </tbody>
-    </table>
    {% endblock content %}
  
 
